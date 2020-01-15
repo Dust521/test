@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uI-v5-dRV">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HrB-1k-6Ki">
+            <objects>
+                <navigationController id="9uI-v5-dRV" customClass="DLNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6ig-kz-0iC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hbe-mh-Dqv" kind="relationship" relationship="rootViewController" id="M7q-11-HHW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyJ-Iz-kfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-820" y="87"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="EAn-dA-5Id">
+            <objects>
+                <viewController id="Hbe-mh-Dqv" customClass="DLHomePageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AtC-wD-frS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-Rf-AsT">
+                                <rect key="frame" x="0.0" y="134" width="375" height="800"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddE-o3-ij9">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Hbe-mh-Dqv" id="7so-D6-ydx"/>
+                                        </connections>
+                                    </scrollView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="鲜蔬分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-TS-TfX">
+                                        <rect key="frame" x="10" y="201" width="78" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <color key="textColor" red="0.96778279542922974" green="0.83181130886077881" blue="0.34101724624633789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="highlightedColor" red="0.99866098165512085" green="0.88309270143508911" blue="0.034832417964935303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" translatesAutoresizingMaskIntoConstraints="NO" id="bKI-mR-JCz">
+                                        <rect key="frame" x="89" y="155" width="200" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.34509803919999998" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q7v-Rf-AsT" firstAttribute="top" secondItem="3oi-Rb-zkD" secondAttribute="top" id="0GB-ed-iDx"/>
+                            <constraint firstItem="Q7v-Rf-AsT" firstAttribute="leading" secondItem="3oi-Rb-zkD" secondAttribute="leading" id="VIQ-bb-E3Q"/>
+                            <constraint firstItem="3oi-Rb-zkD" firstAttribute="trailing" secondItem="Q7v-Rf-AsT" secondAttribute="trailing" id="XcU-84-a8m"/>
+                            <constraint firstItem="3oi-Rb-zkD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Q7v-Rf-AsT" secondAttribute="bottom" id="wQE-Rn-xi6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3oi-Rb-zkD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" largeTitleDisplayMode="always" id="wBz-zE-OLI"/>
+                    <connections>
+                        <outlet property="backScrollView" destination="Q7v-Rf-AsT" id="J21-q6-12g"/>
+                        <outlet property="frontScrollView" destination="ddE-o3-ij9" id="LUP-Ym-HSc"/>
+                        <outlet property="pageControl" destination="bKI-mR-JCz" id="Ark-lv-NU7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kM0-aV-ZWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152.80000000000001" y="84.975369458128085"/>
+        </scene>
+    </scenes>
+</document>

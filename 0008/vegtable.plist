@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>大葱</string>
+		<key>img</key>
+		<string>n001.jpg</string>
+		<key>info</key>
+		<string>煎饼卷大葱！</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>莴苣</string>
+		<key>img</key>
+		<string>n002.jpg</string>
+		<key>info</key>
+		<string>莴苣公主？</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>韭苔</string>
+		<key>img</key>
+		<string>n003.jpg</string>
+		<key>info</key>
+		<string>这个炒肉好吃</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>包菜</string>
+		<key>img</key>
+		<string>n004.jpg</string>
+		<key>info</key>
+		<string>炒粉丝炒粉丝炒粉丝</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>黄瓜</string>
+		<key>img</key>
+		<string>n005.jpg</string>
+		<key>info</key>
+		<string>emmmm......</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>土豆</string>
+		<key>img</key>
+		<string>n006.jpg</string>
+		<key>info</key>
+		<string>谁不爱吃介个</string>
+	</dict>
+</array>
+</plist>
